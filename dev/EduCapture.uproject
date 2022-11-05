@@ -3,20 +3,24 @@
 	"EngineAssociation": "5.0",
 	"Category": "",
 	"Description": "",
-	"Modules": [
-		{
-			"Name": "EduCapture",
-			"Type": "Runtime",
-			"LoadingPhase": "Default"
-		}
-	],
 	"Plugins": [
 		{
-			"Name": "ModelingToolsEditorMode",
+			"Name": "GoogleARCore",
 			"Enabled": true,
-			"TargetAllowList": [
-				"Editor"
+			"SupportedTargetPlatforms": [
+				"Android"
+			]
+		},
+		{
+			"Name": "AppleARKit",
+			"Enabled": true,
+			"SupportedTargetPlatforms": [
+				"IOS"
 			]
 		}
+	],
+	"TargetPlatforms": [
+		"Android",
+		"IOS"
 	]
 }
