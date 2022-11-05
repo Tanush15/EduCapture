@@ -60,7 +60,7 @@ const Navabr = () => {
             </span>
           </Navbar.Brand>
         </div>
-        <div className="flex md:order-2 ">
+        <div className="flex  md:order-2 ">
           
             <NavLink
             to="/profile"
@@ -73,7 +73,8 @@ const Navabr = () => {
           <Navbar.Toggle />
         </div>
         {/* <div className="lg:m-auto"> */}
-        <Navbar.Collapse>
+        <Navbar.Collapse
+        className="pl-[15vw]">
           <NavLink
             to="/Home"
             active={true}
