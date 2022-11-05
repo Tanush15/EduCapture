@@ -32,14 +32,6 @@ const userSchema =new mongoose.Schema({
         default:false
     },
     wishlist:[String],
-    tokens:[
-        {
-            token:{
-                type:String,
-                required:true
-            }
-        }
-    ],
     list:[
         {
             item_name:{

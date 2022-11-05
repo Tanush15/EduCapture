@@ -2,8 +2,6 @@
 const express =require('express');
 const User= require('../models/userSchema');
 const bcrypt =require('bcryptjs');
-const jwt =require('jsonwebtoken');
-const Jwt_authenticate=require('../middlewares/Jwt_authenticate');
 
 //Using Express Router Class
 const router=express.Router();
@@ -17,19 +15,13 @@ const router=express.Router();
     {
         return res.status(409).json({error :"Bad Request:{Conflict with server db schema} Plz enter all data.."});
     }
-    //Checking if the Email-ID has @dtu.ac.in domain name
-    var domain = email_id.substring(email_id.lastIndexOf("@") +1);
-    if(domain!='dtu.ac.in')
-    {
-        return res.status(400).json({error :"Bad Request: Only DTU institutional email ID's allowed."});
-    }
 
     try
     {
         //Checking if Email Id already exists in the dB and if it exists returning message back 
         const userLogin = await User.findOne({email_id});
         if(userLogin) return res.status(403).json({error:"{Forbidden to create multiple accounts} Email already exists"});
-
+        
                 
         const user =new User({name,email_id,college_name,password});
         //Hashing the password and c_password with help of middle ware and bcrypt in db/conn.js
@@ -77,13 +69,6 @@ router.post('/signin',async (req,res)=>{
         if(!userLogin) res.json({message:"Invalid Email ID. Pls register before signing in"});
         //Comparing the entered password with the one present in dB
         const isMatched= await bcrypt.compare(password,userLogin.password);
-        //Generatig JWT authentication token
-        const token = await userLogin.generateAuthToken();
-        res.cookie('jwtoken',token,{
-            expires: new Date(Date.now()+ 25892000000),//The cookie will expire in 30 days from the date the user had logged in .
-            //The value above need to be provided in millisconds    
-            httpOnly:true, //Else it will work only in secure
-        });
 
         //Cosnoling Data of User who has logged in for developer's convinience
         console.log(userLogin);
@@ -150,10 +135,7 @@ router.patch('/add_data/:id',async (req,res)=>{
     }
  });
 
-//form page to get profile details after verifying the JWT token using middle Ware
-router.get('/profilec',Jwt_authenticate,(req,res)=>{
-    res.status(200).send(req.rootUser);
-});
+
 
  //Get the whole data from the database 
  router.get('/db',async (req,res)=>

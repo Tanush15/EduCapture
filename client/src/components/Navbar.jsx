@@ -60,8 +60,12 @@ const Navabr = () => {
             </span>
           </Navbar.Brand>
         </div>
-        <div className="flex md:order-2 ">
-          
+        <div className="flex  md:order-2 ">
+        {isAuthenticated ? (
+            <>
+              <div className=" text-slate-300 mt-2 mr-3 font-bold"> {user.name} </div>
+            
+        
             <NavLink
             to="/profile"
             active={true}
@@ -69,11 +73,16 @@ const Navabr = () => {
           >
             <img className=" rounded-full w-10" src="https://flowbite.com/docs/images/people/profile-picture-5.jpg" alt="" />
           </NavLink>
+          </>
           
+          ):(
+            <p></p>
+          )}
           <Navbar.Toggle />
         </div>
         {/* <div className="lg:m-auto"> */}
-        <Navbar.Collapse>
+        <Navbar.Collapse
+        className="pl-[15vw]">
           <NavLink
             to="/Home"
             active={true}
@@ -106,20 +115,8 @@ const Navabr = () => {
           >
             Post Item
           </NavLink>
-          <NavLink
-            to="/signin"
-            className="text-lg text-neutral-400 hover:text-neutral-200"
-          >
-            Login
-          </NavLink>
-        </Navbar.Collapse>
-        {/* </div> */}
-      </Navbar>
-          {isAuthenticated && (
-            <li>
-              <p> {user.name} </p>
-            </li>
-          )}
+          
+          <div className="text-lg text-neutral-400 hover:text-neutral-200"> 
 
 {isAuthenticated ? (
             <li>
@@ -132,7 +129,10 @@ const Navabr = () => {
             <li>
               <button onClick={() => loginWithRedirect()}>Log In</button>
             </li>
-          )}
+          )}</div>
+        </Navbar.Collapse>
+        {/* </div> */}
+      </Navbar>
           
 
     </div>
