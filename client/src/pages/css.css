@@ -1,0 +1,86 @@
+
+  .content-div{
+  background-image:url('');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position:center;
+}
+  .content-div:hover{
+    background-image:
+    linear-gradient(to right,
+     rgba(126, 213, 111, 0.801), hsla(160, 64%, 43%, 0.801) ),
+     url('../Images/car.jpg');
+    }
+
+    .content-div1:hover{
+      background-image:
+      linear-gradient(to right,
+       rgba(126, 213, 111, 0.801), hsla(160, 64%, 43%, 0.801) ),
+       url('../Images/arch.jpg');
+      }
+
+      .content-div2:hover{
+        background-image:
+        linear-gradient(to right,
+         rgba(126, 213, 111, 0.801), hsla(160, 64%, 43%, 0.801) ),
+         url('../Images/human.jpg');
+        }
+
+        .content-div3:hover{
+          background-image:
+          linear-gradient(to right,
+           rgba(126, 213, 111, 0.801), hsla(160, 64%, 43%, 0.801) ),
+           url('../Images/electronics.webp');
+          }
+
+          .content-div4:hover{
+            background-image:
+            linear-gradient(to right,
+             rgba(126, 213, 111, 0.801), hsla(160, 64%, 43%, 0.801) ),
+             url('../Images/music.jpg');
+            }
+
+            .content-div5:hover{
+              background-image:
+              linear-gradient(to right,
+               rgba(126, 213, 111, 0.801), hsla(160, 64%, 43%, 0.801) ),
+               url('../Images/bio.jpg');
+              }
+
+              .content-div6:hover{
+                background-image:
+                linear-gradient(to right,
+                 rgba(126, 213, 111, 0.801), hsla(160, 64%, 43%, 0.801) ),
+                 url('../Images/weapon.jpg');
+                }
+
+                .content-div7:hover{
+                  background-image:
+                  linear-gradient(to right,
+                   rgba(126, 213, 111, 0.801), hsla(160, 64%, 43%, 0.801) ),
+                   url('../Images/robot.avif');
+                  }
+
+    .image-cover  {
+      height:260px;
+    }
+  /*
+  -remove the classes below if you have the 'group-hover'property added in your tailwind config file
+  -also remove the class from the html template
+  */
+    .content-div:hover .fd-cl{ 
+ opacity: 0.25;
+    }
+    .content-div:hover .fd-sh{ 
+ opacity: 1;
+    }
+    .box {
+      @apply
+        bg-indigo-700
+        text-gray-100
+        min-w-full
+        h-32
+        min-h-full
+        rounded;
+    }
+  

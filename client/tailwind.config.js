@@ -5,7 +5,20 @@ module.exports = {
     'node_modules/flowbite-react/**/*.{js,jsx,ts,tsx}'
   ],
   theme: {
-    extend: {},
+    extend: {
+      backgroundImage: {
+        background: "url('./Images/bgg.jpeg')",
+        car: "url('./Images/car.jpg')",
+        arch: "url('./Images/arch.jpg')",
+        human: "url('./Images/human.jpg')",
+        electronics: "url('./Images/electronics.webp')",
+        music: "url('./Images/music.jpg')",
+        bio: "url('./Images/bio.jpg')",
+        weapon: "url('./Images/weapon.jpg')",
+        robot: "url('./Images/robot.avif')",
+        arrow: "url('./Images/arrow1.png')",
+      },
+    },
   },
   plugins: [
     require('flowbite/plugin')    
