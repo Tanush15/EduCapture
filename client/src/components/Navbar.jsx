@@ -107,15 +107,8 @@ const Navabr = () => {
           >
             Post Item
           </NavLink>
-          <NavLink
-            to="/signin"
-            className="text-lg text-neutral-400 hover:text-neutral-200"
-          >
-            Login
-          </NavLink>
-        </Navbar.Collapse>
-        {/* </div> */}
-      </Navbar>
+          
+          <div className="text-lg text-neutral-400 hover:text-neutral-200"> 
           {isAuthenticated && (
             <li>
               <p> {user.name} </p>
@@ -133,7 +126,10 @@ const Navabr = () => {
             <li>
               <button onClick={() => loginWithRedirect()}>Log In</button>
             </li>
-          )}
+          )}</div>
+        </Navbar.Collapse>
+        {/* </div> */}
+      </Navbar>
           
 
     </div>
