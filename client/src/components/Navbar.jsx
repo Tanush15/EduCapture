@@ -1,6 +1,8 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 
+import { useAuth0 } from "@auth0/auth0-react";
+
 import { useState, useEffect } from "react";
 // import Menu from "./Menu";
 import "flowbite";
@@ -44,6 +46,9 @@ const Navabr = () => {
   //   useEffect(()=>{
   //       CallAboutPage();
   //   },[])
+
+  const { loginWithRedirect, isAuthenticated, logout, user } = useAuth0();
+
 
   return (
     <div className="dark ">
@@ -110,6 +115,26 @@ const Navabr = () => {
         </Navbar.Collapse>
         {/* </div> */}
       </Navbar>
+          {isAuthenticated && (
+            <li>
+              <p> {user.name} </p>
+            </li>
+          )}
+
+{isAuthenticated ? (
+            <li>
+              <button
+                onClick={() => logout({ returnTo: window.location.origin })}>
+                Log Out
+              </button>
+            </li>
+          ) : (
+            <li>
+              <button onClick={() => loginWithRedirect()}>Log In</button>
+            </li>
+          )}
+          
+
     </div>
   );
 };
