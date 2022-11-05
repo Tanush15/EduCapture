@@ -61,7 +61,11 @@ const Navabr = () => {
           </Navbar.Brand>
         </div>
         <div className="flex  md:order-2 ">
-          
+        {isAuthenticated ? (
+            <>
+              <div className=" text-slate-300 mt-2 mr-3 font-bold"> {user.name} </div>
+            
+        
             <NavLink
             to="/profile"
             active={true}
@@ -69,7 +73,11 @@ const Navabr = () => {
           >
             <img className=" rounded-full w-10" src="https://flowbite.com/docs/images/people/profile-picture-5.jpg" alt="" />
           </NavLink>
+          </>
           
+          ):(
+            <p></p>
+          )}
           <Navbar.Toggle />
         </div>
         {/* <div className="lg:m-auto"> */}
@@ -109,11 +117,6 @@ const Navabr = () => {
           </NavLink>
           
           <div className="text-lg text-neutral-400 hover:text-neutral-200"> 
-          {isAuthenticated && (
-            <li>
-              <p> {user.name} </p>
-            </li>
-          )}
 
 {isAuthenticated ? (
             <li>

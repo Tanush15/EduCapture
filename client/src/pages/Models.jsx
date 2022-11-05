@@ -1,10 +1,12 @@
 import React from 'react'
+import { useLocation } from 'react-router-dom';
 
 const Models = () => {
-    console.log(location.state.item_id);
+    const location = useLocation();
+    console.log(location.state.item_name);
   return (
     <div>
-
+         e
     </div>
   )
 }
