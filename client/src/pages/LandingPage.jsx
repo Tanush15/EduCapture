@@ -1,6 +1,8 @@
 import React from "react";
 import { Navigate, useNavigate } from "react-router-dom";
 const image1=require("../Images/ld.png");
+const image2=require("../Images/ss2.jpg");
+const image3=require("../Images/ss3.jpg");
 
 const LandingPage = () => {
   const navigate= useNavigate();
@@ -54,7 +56,10 @@ const LandingPage = () => {
         <div className="flex justify">
         <div className="">
        <div className=" text-5xl text-white w-[50vw] ml-28 pt-40 font-thin">GET 3D AND AR VISULIZATION LEARNING</div>
-       <div className=" text-slate-300 text-xl ml-28 pt-5 w-[50vw] font-thin">Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores sint explicabo minus doloribus temporibus possimus? Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sint iusto molestias vitae consequuntur repellat voluptas.</div>
+       <div className=" text-slate-300 text-xl ml-28 pt-5 w-[50vw] font-thin">Thinking of what's inside a steam engine or how our bodies function?
+Join our community and get access to various Bluprints that will quench your thirst for knowledge.
+</div>
+<div className=" text-slate-300 text-xl ml-28 pt-5 w-[50vw] font-bold">Learn Build Teach Earn Cool Rewards</div>
        <button  onClick={() => {
                       navigate("/listing");
                     }} className=" bg-transparent border-white  py-5 px-7 text-xl text-white border-[2px] hover:bg-white hover:text-black transition hover:duration-500 ease-in-out  font-bold rounded-md ml-28 mt-5">Get Started</button>
@@ -82,10 +87,14 @@ const LandingPage = () => {
       <div className="text-center text-5xl text-black mt- font-bold">App Preview</div>
       <div className="mt-[5vh] flex justify-evenly">
         <div className="h-[70vh] bg-white w-[20vw] rounded-3xl">
-          <img src="" alt="" />
+          <img className=" m-auto mt-3 w-[18vw] h-[65vh]" src={image2} alt="" />
         </div>
-        <div className="h-[70vh] bg-white w-[20vw] rounded-3xl"></div>
-        <div className="h-[70vh] bg-white w-[20vw] rounded-3xl"></div>
+        <div className="h-[70vh] bg-white w-[20vw] rounded-3xl">
+        <img className=" m-auto mt-3 w-[18vw] h-[65vh]" src={image3} alt="" />
+        </div>
+        <div className="h-[70vh] bg-white w-[20vw] rounded-3xl">
+        <img className=" m-auto mt-3 w-[18vw] h-[65vh]" src={image2} alt="" />
+        </div>
       </div>
       </div>
       <div className=" absolute left-[52vw] top-[245vh] bg-arrow h-[40vh] w-[20vw] bg-cover"></div>

@@ -52,7 +52,7 @@ const Listing = () => {
                     <button
                     onClick={() => {
                       navigate("/models", {
-                        state: { item_tag: "Vehicle" },
+                        state: { item_tag: "Vehicles" },
                       });
                     }}
                      className="rounded-lg bg-white p-4 text-center  text-lg font-bold text-gray-700"

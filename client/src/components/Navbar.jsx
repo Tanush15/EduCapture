@@ -100,7 +100,7 @@ const Navabr = () => {
             Home
             </NavLink>
           <NavLink
-            to="/Rewards"
+            to="/Reward"
             className="text-lg text-neutral-400 hover:text-neutral-200"
           >
             Rewards
