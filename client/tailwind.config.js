@@ -8,6 +8,8 @@ module.exports = {
     extend: {
       backgroundImage: {
         background: "url('./Images/bgg1.png')",
+        background1: "url('./Images/bg2.jpg')",
+        background2: "url('./Images/bg.webp')",
         car: "url('./Images/car.jpg')",
         arch: "url('./Images/arch.jpg')",
         human: "url('./Images/human.jpg')",

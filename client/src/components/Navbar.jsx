@@ -56,7 +56,7 @@ const Navabr = () => {
         <div className=" sm:absolute">
           <Navbar.Brand href="/">
             <span className="self-center whitespace-nowrap text-xl font-semibold dark:text-white">
-              College Bazzar
+              EduCapture
             </span>
           </Navbar.Brand>
         </div>
@@ -71,37 +71,41 @@ const Navabr = () => {
             active={true}
             className=" text-lg text-neutral-400 hover:text-neutral-200"
           >
-            <img className=" rounded-full w-10" src="https://flowbite.com/docs/images/people/profile-picture-5.jpg" alt="" />
+            <img className=" rounded-full w-10" src= {user.picture} alt="" />
           </NavLink>
           </>
           
           ):(
-            <p></p>
+
+<NavLink
+            to="/profile"
+            active={true}
+            className=" text-lg text-neutral-400 hover:text-neutral-200"
+          >
+            <img className=" rounded-full w-10" src="https://flowbite.com/docs/images/people/profile-picture-5.jpg" alt="" />
+          </NavLink>
+          
+
           )}
           <Navbar.Toggle />
         </div>
         {/* <div className="lg:m-auto"> */}
         <Navbar.Collapse
-        className="pl-[15vw]">
+        className="pl-[20vw]">
           <NavLink
-            to="/Home"
+            to="/listing"
             active={true}
             className=" text-lg text-neutral-400 hover:text-neutral-200"
           >
             Home
             </NavLink>
           <NavLink
-            to="/aboutus"
+            to="/Rewards"
             className="text-lg text-neutral-400 hover:text-neutral-200"
           >
-            About Us
+            Rewards
           </NavLink>
-          <NavLink
-            to="/contact"
-            className="text-lg text-neutral-400 hover:text-neutral-200"
-          >
-            Contact
-          </NavLink>
+          
           <NavLink
             to="/testimonials"
             className="text-lg text-neutral-400 hover:text-neutral-200"

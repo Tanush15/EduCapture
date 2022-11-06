@@ -1,6 +1,10 @@
 import React from 'react'
+import { useAuth0 } from "@auth0/auth0-react";
 
-const profile = () => {
+
+const Profile = () => {
+  const { loginWithRedirect, isAuthenticated, logout, user } = useAuth0();
+
   return (
     <div>
         <div class="bg-gray-700">
@@ -13,12 +17,12 @@ const profile = () => {
                   <div class="image overflow-hidden">
                     <img
                       class="mx-auto h-auto w-full"
-                      src="https://i.etsystatic.com/36532523/r/il/97ae46/4078306713/il_1140xN.4078306713_n74s.jpg"
+                      src={user.picture}
                       alt=""
                     />
                   </div>
                   <h1 class="my-1 text-xl font-bold leading-8 text-gray-100">
-                    tanush
+                    {user.name}
                   </h1>
 
                   <ul class="mt-3 divide-y rounded bg-gray-100 py-2 px-3 text-gray-600 shadow-sm hover:text-gray-700 hover:shadow">
@@ -212,4 +216,4 @@ const profile = () => {
   )
 }
 
-export default profile
+export default Profile
