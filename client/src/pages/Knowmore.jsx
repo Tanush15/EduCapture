@@ -7,6 +7,7 @@ function Knowmore () {
 
   const [isloading, setloading]=useState(true);
   const [data, setData] = useState(null);
+  
   let result;
   let str;
   const [htmlData, setHtmlData] = useState(null);
@@ -23,6 +24,9 @@ function Knowmore () {
     .then(data_ => {
       setData(data_);
       console.log(data_);
+
+      
+      
       
     const regex = /style="(.*?)"/gm;
     const str = data_.html;
@@ -62,18 +66,18 @@ function Knowmore () {
 <div className="relative">
         <div className=""></div>
         
-        <section class="text-gray-700 body-font overflow-hidden bg-slate-700">
+        <section class=" body-font overflow-hidden bg-slate-700 text-white">
           <div class="container px-5 py-24 mx-auto ">
-            <div class="lg:w-[85vw]  mx-auto flex flex-wrap ">
+            <div class="lg:w-[85vw]  mx-auto flex flex-wrap bg-black bg-opacity-30 shadow-slate-900 p-5 rounded-xl ">
               {/* <img
                 alt="ecommerce"
                 class="lg:w-1/2 w-full object-contain object-top rounded border border-gray-200"
                 src=""
               /> */}
-              <div className='lg:w-1/2 w-[60vw] object-contain object-top rounded border border-gray-200' dangerouslySetInnerHTML={sanitizedData(htmlData)} />
+              <div className='lg:w-1/2 w-[60vw] object-contain object-top rounded border border-black border-opacity-10' dangerouslySetInnerHTML={sanitizedData(htmlData)} />
               <div class="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
-                <h2 class="text-sm title-font text-gray-500 tracking-widest">
-                  {}
+                <h2 class="text-sm title-font text-gray-400 tracking-widest">
+                  hell's Kitten
                 </h2>
                 <h1 class="text-gray-900 text-3xl title-font font-medium mb-1">
                   {}
@@ -135,8 +139,8 @@ function Knowmore () {
                     >
                       <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path>
                     </svg>
-                    <span class="text-gray-600 ml-3">
-                      {} Condition
+                    <span class="text-gray-400 ml-3">
+                      {} Rating
                     </span>
                   </span>
                   <span class="flex ml-3 pl-3 py-2 border-l-2 border-gray-200">
@@ -178,8 +182,8 @@ function Knowmore () {
                     </a>
                   </span>
                 </div>
-                <p class="leading-relaxed pb-5 mb-5">
-                  {}disc
+                <p class="leading-relaxed pb-5 mb">
+                This 3D model of a steam train engine allows to visualise its basic building parts and thus have a glimpse of how this gigantic machine used to work back in the 1900's.
                 </p>
                 {/* <div class="flex mt-6 items-center pb-5 border-b-2 border-gray-200 mb-5">
                 <div class="flex">
@@ -215,10 +219,10 @@ function Knowmore () {
               </div> */}
                 <div class="flex border-b-2 border-gray-200 pb-5">
                   <span class="title-font font-medium text-2xl text-gray-900">
-                    ₹{}
+                   
                   </span>
-                  <button class="flex ml-auto text-white bg-red-500 border-0 py-2 px-6 focus:outline-none hover:bg-red-600 rounded">
-                    Report
+                  <button class="flex ml-auto text-white bg-green-500 border-0 py-2 px-6 focus:outline-none hover:bg-green-600 rounded">
+                    Dowload
                   </button>
                   {/* <button
                     class="rounded-full w-10 h-10 bg-gray-200 p-0 border-0 inline-flex items-center justify-center text-gray-500 ml-4"
@@ -238,15 +242,15 @@ function Knowmore () {
                   </button> */}
                 </div>
                 <div className="my-5 border-b-2 border-gray-200 pb-5">
-                  <div className=" text-xl font-semibold">Features</div>
+                  <div className=" text-xl font-semibold">More Information</div>
                   <div className="mt-[2%]">
                     <ul className="list-disc list-outside px-[5%]">
                       <li>
-                        The condition of this product is{" "}
+                         version 1.0
                         {}.
                       </li>
                       <li>
-                        The product is {} Months Old
+                        Blueprint provided for immersive learning experience.
                       </li>
                     </ul>
                   </div>
