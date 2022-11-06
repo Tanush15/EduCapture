@@ -10,6 +10,28 @@ function Knowmore () {
   let str;
   const [htmlData, setHtmlData] = useState(null);
 
+  //  const location = useLocation();
+  //   console.log(location.state.item_id);
+
+    
+  //   const [dat, setdat] = useState();
+
+  //   const filterr = () => {
+  //       console.log(dat);
+  //       console.log(Data);
+  //       const res = Data.map((element) => {
+  //         return {
+  //           ...element,
+  //           list: element.list.filter((currentVal) => {
+  //             return currentVal.item_id === location.state.item_id;
+  //           }
+  //           ),
+  //         }
+  //       });
+  //       setdat(res);
+  //       console.log(res);
+  //     }
+
 
 
     useEffect(() => {
