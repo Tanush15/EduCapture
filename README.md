@@ -45,7 +45,3 @@ This would not have been possible without immense help from my team members
 
 
 
-## Demo
-
-Insert gif or link to demo
-
