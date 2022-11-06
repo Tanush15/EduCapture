@@ -24,7 +24,10 @@ function App() {
     <Route path="/testimonials" element={<Testimonials/> } />       
     <Route path="/models" element={<Models/> } />    
     <Route path="/reward" element={<Reward/> } />  
-    <Route path="/upload" element={<Upload_form/> } /> 
+
+    <Route path="/form" element={<Upload_form/> } />  
+
+
    </Routes>                                                       
     </>
   );

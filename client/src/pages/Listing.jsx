@@ -52,7 +52,7 @@ const Listing = () => {
                     <button
                     onClick={() => {
                       navigate("/models", {
-                        // state: { item_id: listt.tag },
+                        state: { item_tag: "Vehicle" },
                       });
                     }}
                      className="rounded-lg bg-white p-4 text-center  text-lg font-bold text-gray-700"
@@ -81,10 +81,17 @@ const Listing = () => {
                 </div>
                 <div className="fd-sh absolute opacity-0 group-hover:opacity-100">
                   <span className="font-sans text-3xl font-bold leading-relaxed tracking-wider text-white">
-                    architechture
+                    archtechture
                   </span>
                   <div className="pt-8 text-center">
-                    <button className="rounded-lg bg-white p-4 text-center  text-lg font-bold text-gray-700">
+                    <button
+                    onClick={() => {
+                      navigate("/models", {
+                        state: { item_tag: "Archtechture" },
+                      });
+                    }}
+
+                    className="rounded-lg bg-white p-4 text-center  text-lg font-bold text-gray-700">
                       View Models
                     </button>
                   </div>
@@ -111,7 +118,13 @@ const Listing = () => {
                     Human Anatomy
                   </span>
                   <div className="pt-8 text-center">
-                    <button className="rounded-lg bg-white p-4 text-center  text-lg font-bold text-gray-700">
+                    <button
+                    onClick={() => {
+                      navigate("/models", {
+                        state: { item_tag: "Human" },
+                      });
+                    }}
+                    className="rounded-lg bg-white p-4 text-center  text-lg font-bold text-gray-700">
                       View Models
                     </button>
                   </div>
@@ -138,7 +151,13 @@ const Listing = () => {
                     Electronics & Gadget
                   </span>
                   <div className="pt-8 text-center">
-                    <button className="rounded-lg bg-white p-4 text-center  text-lg font-bold text-gray-700">
+                    <button 
+                    onClick={() => {
+                      navigate("/models", {
+                        state: { item_tag: "Electronics" },
+                      });
+                    }}
+                    className="rounded-lg bg-white p-4 text-center  text-lg font-bold text-gray-700">
                       View Models
                     </button>
                   </div>
@@ -165,7 +184,13 @@ const Listing = () => {
                     Music Instruments
                   </span>
                   <div className="pt-8 text-center">
-                    <button className="rounded-lg bg-white p-4 text-center  text-lg font-bold text-gray-700">
+                    <button 
+                    onClick={() => {
+                      navigate("/models", {
+                        state: { item_tag: "Electronics" },
+                      });
+                    }}
+                    className="rounded-lg bg-white p-4 text-center  text-lg font-bold text-gray-700">
                       View Models
                     </button>
                   </div>
@@ -192,7 +217,13 @@ const Listing = () => {
                     BioTech Machines
                   </span>
                   <div className="pt-8 text-center">
-                    <button className="rounded-lg bg-white p-4 text-center  text-lg font-bold text-gray-700">
+                    <button
+                    onClick={() => {
+                      navigate("/models", {
+                        state: { item_tag: "BioTech" },
+                      });
+                    }}
+                    className="rounded-lg bg-white p-4 text-center  text-lg font-bold text-gray-700">
                       View Models
                     </button>
                   </div>
@@ -219,7 +250,13 @@ const Listing = () => {
                     Weapons
                   </span>
                   <div className="pt-8 text-center">
-                    <button className="rounded-lg bg-white p-4 text-center  text-lg font-bold text-gray-700">
+                    <button
+                    onClick={() => {
+                      navigate("/models", {
+                        state: { item_tag: "Weapon" },
+                      });
+                    }}
+                    className="rounded-lg bg-white p-4 text-center  text-lg font-bold text-gray-700">
                       View Models
                     </button>
                   </div>
@@ -246,7 +283,13 @@ const Listing = () => {
                     Robotics
                   </span>
                   <div className="pt-8 text-center">
-                    <button className="rounded-lg bg-white p-4 text-center  text-lg font-bold text-gray-700">
+                    <button 
+                    onClick={() => {
+                      navigate("/models", {
+                        state: { item_tag: "Robotics" },
+                      });
+                    }}
+                    className="rounded-lg bg-white p-4 text-center  text-lg font-bold text-gray-700">
                       View Models
                     </button>
                   </div>

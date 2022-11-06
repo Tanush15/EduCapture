@@ -11,7 +11,7 @@ function Knowmore () {
   const [htmlData, setHtmlData] = useState(null);
 
   //  const location = useLocation();
-  //   console.log(location.state.item_tag);
+  //   console.log(location.state.item_id);
 
     
   //   const [dat, setdat] = useState();
@@ -23,7 +23,7 @@ function Knowmore () {
   //         return {
   //           ...element,
   //           list: element.list.filter((currentVal) => {
-  //             return currentVal.item_tag === location.state.item_tag;
+  //             return currentVal.item_id === location.state.item_id;
   //           }
   //           ),
   //         }
