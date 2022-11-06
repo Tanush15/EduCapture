@@ -8,7 +8,7 @@ const Listing = () => {
 
   return (
     <>
-      <div className="bg-[url('https://source.unsplash.com/1600x800/?dark')] bg-cover">
+      <div className=" bg-background2 bg-cover">
         <div className="min-h-[90.6vh]">
         <div className="pt-4 text-center text-5xl  text-gray-400 ">
             Start Learning

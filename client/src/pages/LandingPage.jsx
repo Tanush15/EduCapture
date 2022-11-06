@@ -1,8 +1,8 @@
 import React from "react";
-
+import { Navigate, useNavigate } from "react-router-dom";
 
 const LandingPage = () => {
-  
+  const navigate= useNavigate();
 
   return (
     <>
@@ -52,20 +52,30 @@ const LandingPage = () => {
       <div className=" min-h-[120vh] bg-background bg-cover">
        <div className=" text-5xl text-white w-[60vw] ml-28 pt-40 font-thin">GET 3D AND AR VISULIZATION LEARNING</div>
        <div className=" text-slate-300 text-xl ml-28 pt-5 w-[50vw] font-thin">Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores sint explicabo minus doloribus temporibus possimus? Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sint iusto molestias vitae consequuntur repellat voluptas.</div>
-       <button className=" bg-transparent border-white  py-5 px-7 text-xl text-white border-[2px] hover:bg-white hover:text-black transition hover:duration-500 ease-in-out  font-bold rounded-md ml-28 mt-5">Get Started</button>
+       <button  onClick={() => {
+                      navigate("/listing");
+                    }} className=" bg-transparent border-white  py-5 px-7 text-xl text-white border-[2px] hover:bg-white hover:text-black transition hover:duration-500 ease-in-out  font-bold rounded-md ml-28 mt-5">Get Started</button>
       </div>
       <div className=" absolute top-[100vh] h-[60vh] bg-white w-[80vw] left-[9vw] rounded-xl">
         <div className=" text-center text-xl text-red-700 mt-3">Checkout The Features</div>
         <div className="text-center text-5xl text-black mt- font-bold">Immersive Learning Platform</div>
+        <div className="flex justify-evenly mt-[10vh] relative">
+          <div className="bg-white text-center text-green-500 text-3xl absolute top-[5vh] w-[18vw] py-[8vh] font-bold">Rewards</div>
+          <img className="w-[20vw]" src="https://static.sketchfab.com/static/builds/web/dist/static/assets/images/illustrations/5a8c3999109b60b087129b3795aafcde-v2.svg" alt="" />
+          <img className="w-[20vw]" src="https://static.sketchfab.com/static/builds/web/dist/static/assets/images/illustrations/5a8c3999109b60b087129b3795aafcde-v2.svg" alt="" />
+          <img className="w-[20vw]" src="https://static.sketchfab.com/static/builds/web/dist/static/assets/images/illustrations/162073e57ccb0cf07a5dcf7d591cfb1b-v2.svg" alt="" />
+        </div>
       </div>
       
-      <div className="min-h-[65vh] pb-[6vh] bg-lime-300 ">
+      <div className="min-h-[65vh] pb-[6vh] bg-gradient-to-b from-gray-900 to-gray-600  ">
         <div className=" text-center">frd</div>
         <div className="mt-[40vh] w-[90vw] h-[95vh] bg-slate-300 mx-auto">
       <div className=" text-center text-xl text-green-700 pt-[5vh] ">Checkout App Interface</div>
       <div className="text-center text-5xl text-black mt- font-bold">App Preview</div>
       <div className="mt-[5vh] flex justify-evenly">
-        <div className="h-[70vh] bg-white w-[20vw] rounded-3xl"></div>
+        <div className="h-[70vh] bg-white w-[20vw] rounded-3xl">
+          <img src="" alt="" />
+        </div>
         <div className="h-[70vh] bg-white w-[20vw] rounded-3xl"></div>
         <div className="h-[70vh] bg-white w-[20vw] rounded-3xl"></div>
       </div>
