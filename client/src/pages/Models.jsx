@@ -5,28 +5,75 @@ import { useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 
 function Models()  {
+  const [Data, setData] = useState();
+  const [isFetching, setIsFetching] = useState(true);
+
+  const CallAboutPage = async () => {
+    setIsFetching(true);
+    console.log("Call about");
+    try {
+      console.log("tried");
+      const res = await fetch("/db", {
+        method: "GET",
+        headers: {
+          Accept: "application/json",
+          "Content-Type": "application/json",
+        },
+        credentials: "include",
+      });
+      const object = await res.json();
+      //    setUserData(object);
+      console.log(object);
+      filterr(object);
+      // setData(object);
+      // console.log(Data);
+
+      setIsFetching(false);
+      if (!res.status === 201) {
+        const error = new Error(res.error);
+        alert(
+          "There seems to be some issue with your credentials. We are working on it."
+        );
+        throw error;
+      }
+    } catch (err) {
+      console.log(err);
+      console.log("caught error");
+      setIsFetching(false);
+      // navigate("/signin");
+    }
+  };
+
+  useEffect(() => {
+    CallAboutPage();
+    // console.log(Data);
+    // filtertags();
+  }, []);
+
+
     const navigate= useNavigate();
-    // const location = useLocation();
-    // console.log(location.state.item_tag);
+    const location = useLocation();
+    console.log(location.state.item_tag);
 
     // const [Data, setData] = useState();
     const [dat, setdat] = useState();
 
-    // const filterr = () => {
-    //     console.log(dat);
-    //     console.log(Data);
-    //     const res = Data.map((element) => {
-    //       return {
-    //         ...element,
-    //         list: element.list.filter((currentVal) => {
-    //           return currentVal.item_tag === location.state.item_tag;
-    //         }
-    //         ),
-    //       }
-    //     });
-    //     setdat(res);
-    //     console.log(res);
-    //   }
+    const filterr = (Data) => {
+        // console.log(dat);
+        console.log(Data);
+        const res = Data.map((element) => {
+          return {
+            ...element,
+            list: element.list.filter((currentVal) => {
+              console.log(currentVal.item_tag);
+              return currentVal.item_tag == location.state.item_tag;
+            }
+            ),
+          }
+        });
+        setdat(res);
+        console.log(res);
+      }
 
       
 
@@ -37,10 +84,17 @@ function Models()  {
        
     //   }, []);
     
-
+    if(isFetching)
+    {return(
+      <>
+      </>
+    )
+    }
+    else{
   return (
     <div className=' bg-slate-700'>
-         <div className=" text-white text-7xl font-thin pt-5 pl-5">View My Models?</div>
+         <div className=" text-white text-5xl font-thin pt-5 pl-5"> {location.state.item_tag} Models</div>
+         <div className=""></div>
          <div className=" flex  grid min-h-[90.6vh] grid-cols-4 justify-center     gap-y-8 gap-x-5 px-3 before:hidden after:hidden">
             <div className="py-4">
               <div className="">
@@ -53,16 +107,16 @@ function Models()  {
                         className=" text-left"
                         onClick={() => {
                           navigate("/knowmore", {
-                            state: { item_id: listt._id },
+                            state: { item_id: listt.item_id },
                           });
                         }}
                       >
                         <img
-                          className=" rounded-tl-3xl rounded-br-3xl object-cover w-[280px] h-[300px]"
+                          className=" rounded-tl-3xl rounded-br-3xl object-cover w-[350px] h-[300px]"
                           src={listt.item_immage}
                           alt=""
                         />
-                        <div className=" text-xl text-white font-thin">
+                        <div className=" text-xl text-white font-bold text-center">
                             {listt.item_name}
                         </div>
                       </button>
@@ -76,7 +130,9 @@ function Models()  {
             </div>
             </div>
     </div>
+
+   
   )
-}
+}}
 
 export default Models

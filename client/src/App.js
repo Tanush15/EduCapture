@@ -10,6 +10,7 @@ import Testimonials from "./pages/Testimonials";
 import Models from "./pages/Models";
 import Reward from "./pages/Rewards";
 import Upload_form from "./pages/Upload_form"
+import Knowmore from "./pages/Knowmore";
 
 
 function App() {
@@ -24,7 +25,7 @@ function App() {
     <Route path="/testimonials" element={<Testimonials/> } />       
     <Route path="/models" element={<Models/> } />    
     <Route path="/reward" element={<Reward/> } />  
-
+    <Route path="/knowmore" element={<Knowmore/> } />  
     <Route path="/form" element={<Upload_form/> } />  
 
 

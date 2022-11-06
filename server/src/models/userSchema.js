@@ -35,7 +35,7 @@ const userSchema =new mongoose.Schema({
             },
             item_id:
             {
-                type:Number,    
+                type:String,    
             },
             item_tag:
             {

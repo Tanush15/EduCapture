@@ -1,5 +1,6 @@
 import React, {useState, useEffect} from 'react';
 import DOMPurify from 'dompurify'
+import { useLocation } from 'react-router-dom';
 
 
 function Knowmore () {
@@ -10,35 +11,18 @@ function Knowmore () {
   let str;
   const [htmlData, setHtmlData] = useState(null);
 
-  //  const location = useLocation();
-  //   console.log(location.state.item_id);
+   const location = useLocation();
+    console.log(location.state.item_id);
 
-    
-  //   const [dat, setdat] = useState();
-
-  //   const filterr = () => {
-  //       console.log(dat);
-  //       console.log(Data);
-  //       const res = Data.map((element) => {
-  //         return {
-  //           ...element,
-  //           list: element.list.filter((currentVal) => {
-  //             return currentVal.item_id === location.state.item_id;
-  //           }
-  //           ),
-  //         }
-  //       });
-  //       setdat(res);
-  //       console.log(res);
-  //     }
-
+ 
 
 
     useEffect(() => {
-    fetch("https://sketchfab.com/oembed?url=https://sketchfab.com/models/dGUrytaktlDeNudCEGKk31oTJY")
+    fetch(`https://sketchfab.com/oembed?url=https://sketchfab.com/models/${location.state.item_id}`)
     .then(response => response.json())
     .then(data_ => {
       setData(data_);
+      console.log(data_);
       
     const regex = /style="(.*?)"/gm;
     const str = data_.html;
