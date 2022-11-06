@@ -2,6 +2,7 @@ import React from "react";
 import { Route, Routes } from "react-router-dom";
 
 import Navbar from "./components/Navbar";
+import Footer from "./components/footer/Footer";
 import LandingPage from "./pages/LandingPage";
 import Listing from "./pages/Listing";
 import Profile from "./pages/Profile";
@@ -28,8 +29,9 @@ function App() {
     <Route path="/knowmore" element={<Knowmore/> } />  
     <Route path="/form" element={<Upload_form/> } />  
 
+   </Routes>  
+   <Footer/>
 
-   </Routes>                                                       
     </>
   );
 }

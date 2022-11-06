@@ -1,5 +1,6 @@
 import React from "react";
 import { Navigate, useNavigate } from "react-router-dom";
+const image1=require("../Images/ld.png");
 
 const LandingPage = () => {
   const navigate= useNavigate();
@@ -50,11 +51,18 @@ const LandingPage = () => {
       </div> */}
       
       <div className=" min-h-[120vh] bg-background bg-cover">
-       <div className=" text-5xl text-white w-[60vw] ml-28 pt-40 font-thin">GET 3D AND AR VISULIZATION LEARNING</div>
+        <div className="flex justify">
+        <div className="">
+       <div className=" text-5xl text-white w-[50vw] ml-28 pt-40 font-thin">GET 3D AND AR VISULIZATION LEARNING</div>
        <div className=" text-slate-300 text-xl ml-28 pt-5 w-[50vw] font-thin">Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores sint explicabo minus doloribus temporibus possimus? Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sint iusto molestias vitae consequuntur repellat voluptas.</div>
        <button  onClick={() => {
                       navigate("/listing");
                     }} className=" bg-transparent border-white  py-5 px-7 text-xl text-white border-[2px] hover:bg-white hover:text-black transition hover:duration-500 ease-in-out  font-bold rounded-md ml-28 mt-5">Get Started</button>
+
+
+      </div>
+      <div className=""><img className=" mt-[15vh] mr-[15vw]" src={image1} alt="" /></div>
+      </div>
       </div>
       <div className=" absolute top-[100vh] h-[60vh] bg-white w-[80vw] left-[9vw] rounded-xl">
         <div className=" text-center text-xl text-red-700 mt-3">Checkout The Features</div>
@@ -81,7 +89,7 @@ const LandingPage = () => {
       </div>
       </div>
       <div className=" absolute left-[52vw] top-[245vh] bg-arrow h-[40vh] w-[20vw] bg-cover"></div>
-      <button className=" bg-black border-white  py-5 px-7 text-xl text-white border-[2px] hover:bg-white hover:text-black transition hover:duration-500 ease-in-out  font-bold rounded-md ml-[42vw] mt-10">Download Apk</button>
+      <a href="https://drive.google.com/uc?export=download&id=1TNnA2oZBQDIWlyPq3gMPaMb5Od0bnqt3"><button  className=" bg-black border-white  py-5 px-7 text-xl text-white border-[2px] hover:bg-white hover:text-black transition hover:duration-500 ease-in-out  font-bold rounded-md ml-[42vw] mt-10">Download Apk</button></a>
       </div>
 
 
