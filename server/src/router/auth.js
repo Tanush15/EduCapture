@@ -83,40 +83,27 @@ router.post('/signin',async (req,res)=>{
     }
 });
 
-  //The below function will be used to delete data of an indiviual fron the database .
-  router.delete('/register/:id',async (req,res)=>{
-
-    try
-    {
-        const _id= req.params.id;
-        const single_user =await User.findByIdAndDelete(_id);
-        //Logging the user that has been deleted for developer's convenience.
-        console.log(single_user);
-        res.status(200).json({message:"Successfully removed the user from the database."});
-    }
-    catch(err){
-        console.log(err);
-        res.status(500).json({error:"We are experiencing some server problems!!"})
-    }
- });
-
 //The given function adds a new listed item into the database and update list array.
 router.patch('/add_data/:id',async (req,res)=>{
+    console.log("Hello");
     try
     {
+        console.log("try");
+        console.log(req.body);
+        console.log(req.params.id);
+        
         const newItem = 
         {
             item_name:req.body.item_name,
-            item_price: req.body.item_price,
-            item_age:req.body.item_age,
-            item_condition:req.body.item_condition,
+            item_author: req.body.item_author,
             item_immage:req.body.item_image,
-            item_tag:req.body.item_tag,
             item_description:req.body.item_description,
+            item_tag:req.body.item_tag
             
         };
+        console.log(newItem);
         
-        await User.findOneAndUpdate(
+        const response = await User.findOneAndUpdate(
           {
             email_id: req.params.id,
           },
@@ -126,6 +113,7 @@ router.patch('/add_data/:id',async (req,res)=>{
             },
           }
         )
+        console.log(response);
         res.status(201).json({message:"Listing successfully added on the website"});
         
     }
