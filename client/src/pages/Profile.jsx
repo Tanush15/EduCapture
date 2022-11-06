@@ -153,61 +153,15 @@ const Profile = () => {
                     </div>
                   </div>
                 </div>
-                {/* <!-- End of about section --> */}
+                
 
                 <div class="my-4"></div>
 
-                {/* <!-- Teacher's section--> */}
-                <div class=" rounded-sm bg-black bg-opacity-30 p-3  text-white shadow-lg  shadow-slate-900">
-                  <div class="mb-3 flex items-center space-x-2 font-semibold leading-8 text-gray-900">
-                    <span class="text-green-500">
-                      <svg
-                        class="h-5"
-                        xmlns="http://www.w3.org/2000/svg"
-                        fill="none"
-                        viewBox="0 0 24 24"
-                        stroke="currentColor"
-                      >
-                        <path
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                          stroke-width="2"
-                          d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"
-                        />
-                      </svg>
-                    </span>
-                    <span class="tracking-wide text-white">
-                      Your Models
-                    </span>
-                  </div>
-                  <div class=" before:hidden after:hidden">
+                
+              
                     
 
-                    {/* {userdata.list.map((dataa, key) => {
-                                return (<>
-                                    <button
-                        className=" text-left"
-                        onClick={() => {
-                          navigate("/knowmore", {
-                            state: { item_id: dataa._id },
-                          });
-                        }}
-                      >
-                                <Cards productName={dataa.item_name} productInfo={dataa.item_description} productImage={dataa.item_immage}/>
-                                </button>
-                                <Routes>
-                                <Route
-                                  path="/knowmore"
-                                  element={<KnowMore a={dataa._id} />}
-                                />
-                              </Routes>
-                              </>
-                              );
-                                    })} */}
-                  </div>
-                  {/* <!-- End of Experience and education grid --> */}
-                </div>
-                {/* <!-- End of profile tab --> */}
+                  
               </div>
             </div>
           </div>

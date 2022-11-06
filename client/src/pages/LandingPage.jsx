@@ -3,6 +3,7 @@ import { Navigate, useNavigate } from "react-router-dom";
 const image1=require("../Images/ld.png");
 const image2=require("../Images/ss2.jpg");
 const image3=require("../Images/ss3.jpg");
+const image4=require("../Images/ss.jpg");
 
 const LandingPage = () => {
   const navigate= useNavigate();
@@ -66,7 +67,7 @@ Join our community and get access to various Bluprints that will quench your thi
 
 
       </div>
-      <div className=""><img className=" mt-[15vh] mr-[15vw]" src={image1} alt="" /></div>
+      <div className=""><img className=" mt-[15vh] mr-[15vw] w-[45vw]" src={image1} alt="" /></div>
       </div>
       </div>
       <div className=" absolute top-[100vh] h-[60vh] bg-white w-[80vw] left-[9vw] rounded-xl">
@@ -93,7 +94,7 @@ Join our community and get access to various Bluprints that will quench your thi
         <img className=" m-auto mt-3 w-[18vw] h-[65vh]" src={image3} alt="" />
         </div>
         <div className="h-[70vh] bg-white w-[20vw] rounded-3xl">
-        <img className=" m-auto mt-3 w-[18vw] h-[65vh]" src={image2} alt="" />
+        <img className=" m-auto mt-3 w-[18vw] h-[65vh]" src={image4} alt="" />
         </div>
       </div>
       </div>
