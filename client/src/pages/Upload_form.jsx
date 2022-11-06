@@ -43,6 +43,8 @@ const Form = () => {
 
     
   const uploadImage = (e) => {
+    console.log(user);
+    console.log(data);
     const datat = new FormData()
     datat.append("file", e.target.files[0])
     datat.append("upload_preset", "kllpiwre")
@@ -76,7 +78,7 @@ const Form = () => {
       console.log(user);
       
   
-      const res = await fetch(`http://localhost:5000/add_data/${user.email}`, {
+      const res = await fetch(`http://localhost:5000/add_data/yashjoshimail@gmail.com`, {
         method: "PATCH",
         headers: {
           "Content-Type": "application/json",
@@ -152,12 +154,16 @@ const Form = () => {
                       <MenuItem value="Stationary">Stationary</MenuItem>
                       <MenuItem value="Sports">Sports</MenuItem>
 
-                      <MenuItem value="Clothing_essentials">
-                        Clothing Essentials
+                      <MenuItem value="Vehicles">
+                        Vehicles
                       </MenuItem>
-                      <MenuItem value="Books">Books</MenuItem>
-                      <MenuItem value="Daily-use">Daily Use</MenuItem>
-                      <MenuItem value="Others">Others</MenuItem>
+                      <MenuItem value="Archtechture">Archtechture</MenuItem>
+                      <MenuItem value="Human">Human Anatomy</MenuItem>
+                      <MenuItem value="electronics">Electronics</MenuItem>
+                      <MenuItem value="BioTech">Bio Tech</MenuItem>
+                      <MenuItem value="Robotics">Robotics</MenuItem>
+
+
                     </Select>
                   </FormControl>
                 </Box>

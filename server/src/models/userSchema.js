@@ -40,7 +40,6 @@ const userSchema =new mongoose.Schema({
             item_tag:
             {
                 type:String,
-                // enum: ['under_approval', 'approved','deleted','blacklisted','Sports'],
             },
         }
     ]

@@ -91,6 +91,7 @@ router.patch('/add_data/:id',async (req,res)=>{
         console.log("try");
         console.log(req.body);
         console.log(req.params.id);
+        
         const newItem = 
         {
             item_name:req.body.item_name,
@@ -100,8 +101,9 @@ router.patch('/add_data/:id',async (req,res)=>{
             item_tag:req.body.item_tag
             
         };
+        console.log(newItem);
         
-        await User.findOneAndUpdate(
+        const response = await User.findOneAndUpdate(
           {
             email_id: req.params.id,
           },
@@ -111,6 +113,7 @@ router.patch('/add_data/:id',async (req,res)=>{
             },
           }
         )
+        console.log(response);
         res.status(201).json({message:"Listing successfully added on the website"});
         
     }
