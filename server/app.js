@@ -7,6 +7,7 @@ const port = process.env.PORT || 5000;
 const cors = require("cors");
 const server = require("http").createServer(app);
 
+//Using Cores
 app.use(cors());
 
 const fileUpload = require("express-fileupload");
